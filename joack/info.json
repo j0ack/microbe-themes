@@ -1,0 +1,10 @@
+{
+    "application": "microbe",
+    "identifier": "joack",
+    "name": "Joack",
+    "author": "TROUVERIE Joachim",
+    "license": "WTFPL",
+    "description": "Foundation 5 theme",
+    "version": "0.0.1",
+    "preview": "joack.png"
+}

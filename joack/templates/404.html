@@ -1,0 +1,7 @@
+{% extends theme("layout.html") %}
+
+{% block content %}
+  <h2>{{ _('Page not found') }}</h2>
+  <br />
+  <a href="{{ url_for('index') }}">{{ _('Go to main page') }}</a>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends theme("base.html") %}
+
+{% block topbar %}
+  <div class="row topbar">
+    <div class="large-12">
+      <h1>
+          <a href="{{ url_for('index') }}">{{ config.SITENAME }}</a>
+          {% if config.SUBTITLE %}
+            <small>{{ config.SUBTITLE }}</small>
+          {% endif %}
+          {% if config.RSS == 'YES' %}
+          <a href="{{ url_for('feed') }}"><img class="right" src="{{ theme_static('img/rss.png') }}" height="30" width="30" alt = "Rss"></a>
+          {% endif %}        
+      </h1>      
+      <div class="nav-bar">
+        <ul class="button-group">
+          <li><a href="{{ url_for('archives') }}" class="small nav-links">{{ _('Archive') }}</a>
+          <li class = "separator"> | </li>
+          {% for page in g.static_pages %}
+            <li>
+              <a href="{{ url_for('page', path = page.path) }}" class="small nav-links">{{ page.title }}</a>
+            </li>
+            <li class = "separator"> | </li>
+          {% endfor %}
+          <li class="right has-form">
+            <form action="{{ url_for('search') }}" method="POST" name="search">
+              {{g.search_form.hidden_tag()}}
+              {{g.search_form.search(size=20)}}
+              <input type="submit" value="Search" style = "display : none"> 
+            </form>
+          </li>              
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+ 
+{% block main %}
+   
+  <div class="row">
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+      {% block content %}{% endblock %} 
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar --> 
+    <aside class="large-3 columns">
+      {% if g.categories %}
+        <h5 class="side-title">{{ _('Categories') }}</h5>
+        <ul class="side-nav">
+        {% for cat in g.categories %}
+          <li><a href="{{ url_for('category', category = cat) }}">{{ cat }}</a></li>
+        {% endfor %}
+       </ul>
+      {% endif %}
+      
+      {% if g.links %}
+        {% for category, links in g.links.iteritems() %}
+          {% if links %}
+            <h5 class="side-title">{{ category | title }}</h5>
+            <ul class="side-nav">
+              {% for link in links %}
+                <li>{{ link.html | safe }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+    </aside> 
+    <!-- End Sidebar -->
+  </div>
+ 
+{% endblock %}
+

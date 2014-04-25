@@ -1,0 +1,150 @@
+/**
+ * CSS for Joacode theme
+ **/
+
+/** General **/
+
+body {
+    background-color : #ededed;
+}
+
+h1 {
+    margin : 0px;
+    font-size : 3rem; 
+    font-weight : bold;    
+    padding-left : 5px; 
+    padding-bottom : 20px;
+    background: rgb(90,105,115);
+    background: -moz-linear-gradient(top, rgba(90,105,115,1) 0%, rgba(47,47,47,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(90,105,115,1)), color-stop(100%,rgba(47,47,47,1)));
+    background: -webkit-linear-gradient(top, rgba(90,105,115,1) 0%,rgba(47,47,47,1) 100%); 
+    background: -o-linear-gradient(top, rgba(90,105,115,1) 0%,rgba(47,47,47,1) 100%); 
+    background: -ms-linear-gradient(top, rgba(90,105,115,1) 0%,rgba(47,47,47,1) 100%); 
+    background: linear-gradient(to bottom, rgba(90,105,115,1) 0%,rgba(47,47,47,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a6973', endColorstr='#2f2f2f',GradientType=0 ); 
+       
+}
+
+h1 a,
+h1 a:hover {
+    color : #ddd; 
+    text-decoration: none;
+}
+
+h1 small {
+    font-weight : normal;
+    font-style : italic;
+    font-size : 40%;
+    color : #a3b0b9;
+}
+
+h1 img {
+    margin-top : 1.38rem;
+    margin-right : 40px;
+}
+
+aside {
+    background-color : #e7e7e7;
+}
+
+hr { 
+    border: 0; 
+    height: 0; 
+    border-top: 1px solid rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+pre, code {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/* =========================================== */
+/* Classes                                     */
+/* =========================================== */
+
+/* top bar alignment */
+.topbar {
+    margin-top : 10px;
+    padding-bottom : 10px;
+}
+
+/* nav bar */
+.nav-bar {
+    background-color : #2f2f2f;
+}
+
+.nav-bar .has-form form {
+    padding : 5px;
+    margin : 0;
+}
+
+.nav-bar .has-form input {
+    margin : 0;
+}
+
+.separator,
+.nav-links {   
+    display : block;
+    padding : 10px;
+    text-decoration : none;
+    color : #bbb;
+    border-top : 2px solid transparent;    
+}
+
+.nav-links:hover {
+    background-color : #1D394B;
+    color : #fffffa;
+    border-top : 2px solid #485156;   
+}
+
+/* background */
+.row {
+    background-color : #fffffa;
+}
+
+.article-title {
+    color : #1D394B;
+    font-weight : bold;
+}
+
+.article-info {
+    color : #485156;
+    font-style : italic;
+}
+
+.side-title {
+    margin-bottom : 0px;
+    font-weight : bold;
+}
+
+/** highlight **/
+.codehilite {
+    background-color : #6b6b6b;
+    padding : 5px;
+    margin : 10px;
+}
+
+/** search form **/
+#search {
+    border-radius : 10px;
+    height : 30px;
+}
+ 
+
+/** comments **/
+#comment {
+    margin-bottom : 15px;
+}
+
+#comment ul {
+    list-style-type : none;
+    margin : 0;
+}
+
+#comment ul li {
+    padding : 8px;
+}

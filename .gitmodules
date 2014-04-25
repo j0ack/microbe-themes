@@ -1,0 +1,6 @@
+[submodule "theme_microbe"]
+	path = theme_microbe
+	url = https://github.com/letchap/theme_microbe.git
+[submodule "letchap"]
+	path = letchap
+	url = https://github.com/letchap/theme_microbe.git
