@@ -1,5 +1,5 @@
 Microbe Themes
 ==============
 
-Jinja2 based themes for [Microbe](http://hg.joacodepel.tk/get_microbe/microbe/) application.
+Jinja2 based themes for [Microbe](https://github.com/j0ack/microbe) application.
 
